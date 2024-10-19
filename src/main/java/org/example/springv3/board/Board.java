@@ -22,6 +22,7 @@ public class Board {
     private Integer id;
     @Column(nullable = false)
     private String title;
+    @Lob
     @Column(nullable = false)
     private String content;
     @CreationTimestamp

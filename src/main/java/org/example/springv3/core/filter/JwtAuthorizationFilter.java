@@ -22,7 +22,6 @@ public class JwtAuthorizationFilter implements Filter {
         String accessToken = req.getHeader("Authorization");
 
         if(accessToken == null || accessToken.isBlank()){
-            System.out.println("토큰이 없어요");
             resp.setHeader("Content-Type","application/json; charset=utf-8");
             PrintWriter out = resp.getWriter();
             Resp fail = Resp.fail(401, "토큰이 없어요");
