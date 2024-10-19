@@ -1,6 +1,9 @@
 
-## 테이블
+## 테이블 TODO: 4번
 ```sql
+create database blogdb;
+use blogdb;
+
 CREATE TABLE user_tb (
     id INT AUTO_INCREMENT,
     created_at TIMESTAMP(6),

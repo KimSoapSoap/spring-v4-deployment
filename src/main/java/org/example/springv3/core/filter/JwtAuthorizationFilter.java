@@ -11,6 +11,8 @@ import org.example.springv3.user.User;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 // 책임 : 인가!!
 public class JwtAuthorizationFilter implements Filter {

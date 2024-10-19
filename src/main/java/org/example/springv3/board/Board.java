@@ -22,6 +22,7 @@ public class Board {
     private Integer id;
     @Column(nullable = false)
     private String title;
+    // TODO: 1번
     @Lob
     @Column(nullable = false)
     private String content;

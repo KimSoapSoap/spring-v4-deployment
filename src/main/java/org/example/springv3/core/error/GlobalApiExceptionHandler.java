@@ -16,6 +16,7 @@ public class GlobalApiExceptionHandler {
     // 유효성 검사 실패 (잘못된 클라이언트의 요청)
     @ExceptionHandler(ExceptionApi400.class)
     public ResponseEntity<?> ex400(Exception e) {
+        // TODO: 2번
         log.info("{ssar}님 {ip, device}에서 유효성 검사 실패 : "+e.getMessage());
         return new ResponseEntity<>(Resp.fail(400, e.getMessage()), HttpStatus.BAD_REQUEST);
     }
