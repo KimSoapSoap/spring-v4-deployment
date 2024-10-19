@@ -47,7 +47,7 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-// TODO: 3번
+// TODO: 3번. jar파일이 2개 생성되지 않게 해준다.?
 // jar file just one
 jar {
 	enabled = false

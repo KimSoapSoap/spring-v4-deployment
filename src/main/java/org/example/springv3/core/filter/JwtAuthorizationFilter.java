@@ -38,6 +38,15 @@ public class JwtAuthorizationFilter implements Filter {
             HttpSession session = req.getSession();
             session.setAttribute("sessionUser", sessionUser);
             chain.doFilter(req, resp); // 다음 필터로 가!! 없으면 DS로 감.
+
+
+            //토큰 인증에서 유저 정보 session에서 꺼내기. 이건 예시다 이 방식을 쓰는 것이 아니고 라이브러리를 사용 한다.
+            // 최초에 접속할 때 유저 정보 획득하는 것.
+           /* HashMap<String, Object> userinfo = ((HashMap<String, Object>) session.getAttribute("userinfo"));
+            userinfo.put("username", sessionUser.getUsername());
+           */
+
+
         }catch (Exception e){
             resp.setHeader("Content-Type","application/json; charset=utf-8");
             PrintWriter out = resp.getWriter();

@@ -22,7 +22,7 @@ public class Board {
     private Integer id;
     @Column(nullable = false)
     private String title;
-    // TODO: 1번
+    // TODO: 1번.  LOB을 붙이면 varchar와는 다르게 16mb까지 내용이 들어갈 수 있다.
     @Lob
     @Column(nullable = false)
     private String content;
